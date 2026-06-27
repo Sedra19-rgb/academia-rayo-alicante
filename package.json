@@ -1,0 +1,12 @@
+{
+  "name": "academia-rayo-alicante",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing PPDF® | Signature Experience — Academia Oficial Rayo Vallecano Provincia de Alicante",
+  "scripts": {
+    "dev": "npx --yes serve . -l 5173",
+    "start": "npx --yes serve . -l 5173"
+  },
+  "keywords": ["rayo-vallecano", "academia", "futbol", "alicante", "landing", "ppdf"],
+  "license": "UNLICENSED"
+}

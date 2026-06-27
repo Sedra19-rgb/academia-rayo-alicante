@@ -1,0 +1,8 @@
+node_modules/
+.claude/
+.DS_Store
+*.log
+.vercel
+.env
+.env.local
+assets/img/escudo-original.png
