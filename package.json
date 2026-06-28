@@ -4,6 +4,7 @@
   "private": true,
   "description": "Landing PPDF® | Signature Experience — Academia Oficial Rayo Vallecano Provincia de Alicante",
   "scripts": {
+    "build": "echo \"Static site — nothing to build\"",
     "dev": "npx --yes serve . -l 5173",
     "start": "npx --yes serve . -l 5173"
   },
