@@ -147,8 +147,10 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .btn--light:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .btn--ghost { background: transparent; border-color: var(--line-2); color: var(--text); }
 .btn--ghost:hover { border-color: var(--text); transform: translateY(-2px); }
-.section--dark .btn--ghost { border-color: rgba(255,255,255,.28); color: #fff; }
-.section--dark .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+.section--dark .btn--ghost,
+.hero .btn--ghost { border-color: rgba(255,255,255,.42); color: #fff; }
+.section--dark .btn--ghost:hover,
+.hero .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 .btn--wa { background: #25D366; color: #06310f; }
 .btn--wa:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37,211,102,.3); }
 .btn--lg { padding: 1.05rem 2rem; font-size: 1.05rem; }
