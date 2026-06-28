@@ -14,7 +14,7 @@
      aquí la URL definitiva.
   */
   var CONFIG = {
-    WEBHOOK_URL: 'https://reformaspro.app.n8n.cloud/webhook/rayo-signature',
+    WEBHOOK_URL: 'https://reformaspro.app.n8n.cloud/webhook/academia-rayo-signature',
     WHATSAPP_NUMBER: '34669773531',
     ORIGEN: 'landing-signature'
   };
