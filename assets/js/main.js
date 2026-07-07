@@ -22,8 +22,11 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-  /* ---------- Captura de UTMs (una sola vez, al cargar) ---------- */
-  if (window.ARVTracking) { window.ARVTracking.captureUtms(); }
+  /* ---------- Tracking: UTMs + consentimiento de cookies (al cargar) ---------- */
+  if (window.ARVTracking) {
+    window.ARVTracking.captureUtms();
+    window.ARVTracking.initConsent();
+  }
 
   /* ---------- Año dinámico ---------- */
   var yearEl = $('#year');

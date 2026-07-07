@@ -24,20 +24,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    /* Meta Pixel · Academia Rayo Vallecano Alicante (Business Manager 1147891962951712). */
-    fbq('init', '1552837592857169');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" alt=""
-    src="https://www.facebook.com/tr?id=1552837592857169&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
+  <!-- Meta Pixel · Academia Rayo Vallecano Alicante (BM 1147891962951712).
+       Se carga SOLO tras consentimiento de cookies (ver assets/js/tracking.js). -->
+  <script>window.ARV_PIXEL_ID = '1552837592857169';</script>
+  <style>
+    .cookie-banner{position:fixed;z-index:200;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;background:#0E0E12;color:#F4F3F1;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:15px 18px;box-shadow:0 12px 40px rgba(0,0,0,.5);display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+    .cookie-banner[hidden]{display:none}
+    .cookie-banner__txt{margin:0;flex:1 1 240px;font-size:13px;line-height:1.5;color:#D4D4DA}
+    .cookie-banner__txt a{color:#fff;text-decoration:underline}
+    .cookie-banner__actions{display:flex;gap:10px;margin-left:auto}
+    .cookie-banner__btn{padding:9px 18px;font-size:14px}
+    .cookie-banner .btn--ghost{border-color:rgba(255,255,255,.4);color:#fff}
+    .cookie-banner .btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#programa">Saltar al contenido</a>
@@ -497,6 +496,15 @@
       </div>
     </div>
   </footer>
+
+  <!-- Aviso de cookies (consentimiento para el Meta Pixel) -->
+  <div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-label="Aviso de cookies">
+    <p class="cookie-banner__txt">Usamos cookies propias y de terceros (Meta) para medir y mejorar nuestros anuncios. Puedes aceptarlas o rechazarlas.</p>
+    <div class="cookie-banner__actions">
+      <button type="button" id="cookie-reject" class="btn btn--ghost cookie-banner__btn">Rechazar</button>
+      <button type="button" id="cookie-accept" class="btn btn--primary cookie-banner__btn">Aceptar</button>
+    </div>
+  </div>
 
   <script src="/assets/js/tracking.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
