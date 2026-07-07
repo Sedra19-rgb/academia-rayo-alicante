@@ -22,6 +22,12 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
+  /* ---------- Tracking: UTMs + consentimiento de cookies (al cargar) ---------- */
+  if (window.ARVTracking) {
+    window.ARVTracking.captureUtms();
+    window.ARVTracking.initConsent();
+  }
+
   /* ---------- Año dinámico ---------- */
   var yearEl = $('#year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -136,6 +142,8 @@
       if (!data.edad_nino) { showError('Selecciona la edad del jugador/a.'); form.edad_nino.focus(); return; }
       if (!data.consentimiento) { showError('Necesitamos tu consentimiento para poder contactarte.'); form.consentimiento.focus(); return; }
 
+      var utms = (window.ARVTracking && window.ARVTracking.getUtms()) || {};
+
       var payload = {
         nombre: data.nombre,
         telefono: data.telefono,
@@ -149,7 +157,13 @@
         tipo: 'Lead Academia',
         source: 'Landing · Signature Experience · Rayo Alicante',
         fuenteUrl: window.location.href,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        utm_source: utms.utm_source || '',
+        utm_medium: utms.utm_medium || '',
+        utm_campaign: utms.utm_campaign || '',
+        utm_content: utms.utm_content || '',
+        fbclid: utms.fbclid || '',
+        origen_landing: utms.utm_source ? 'landing-ads' : 'landing-organico'
       };
 
       setLoading(true);
@@ -169,6 +183,9 @@
           setLoading(false);
           if (r.ok) {
             showSuccess(data.nombre);
+            // Evento Lead de Meta Pixel SOLO en éxito real (2xx). No en honeypot
+            // (sale antes del fetch) ni en fallo. Guard fbq dentro de trackLead.
+            if (window.ARVTracking) { window.ARVTracking.trackLead(); }
           } else {
             showError('No hemos podido enviar tus datos. Inténtalo de nuevo o llámanos al +34 669 77 35 31.');
           }
