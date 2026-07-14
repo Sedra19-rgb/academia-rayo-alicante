@@ -325,6 +325,18 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .section--dark .feature-list li { color: var(--on-dark-mute); }
 @media (min-width: 860px) { .split { grid-template-columns: 1fr 1fr; gap: 56px; } .split--reverse .split__media { order: 2; } .split--reverse .split__text { order: 1; } }
 
+/* ---------- Testimonios en vídeo ---------- */
+.split__video { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+.testi-video {
+  display: block; width: 100%; max-width: 240px; aspect-ratio: 9 / 16;
+  border-radius: var(--r-xl); background: #000; object-fit: cover;
+  box-shadow: 0 22px 54px rgba(10,10,13,.16);
+}
+.testi-video--lg { max-width: 280px; }
+.testi-quote { max-width: 320px; margin: 0; text-align: center; font-style: italic; color: var(--mute); font-size: .97rem; line-height: 1.55; }
+.testi-quote span { display: block; margin-top: 7px; font-style: normal; font-weight: 600; font-size: .84rem; letter-spacing: .02em; color: var(--mute-2); }
+.testi-wrap { margin-top: 46px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+
 /* ---------- Precios ---------- */
 .prices { display: grid; gap: 22px; margin-top: 52px; grid-template-columns: 1fr; align-items: stretch; }
 .price {
