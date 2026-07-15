@@ -447,6 +447,28 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 }
 .footer__bottom a { color: var(--mute-2); }
 .footer__bottom a:hover { color: #fff; }
+.footer__bottom--legal { flex-direction: column; justify-content: center; align-items: center; gap: 12px; text-align: center; }
+.footer__legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; font-size: .9rem; }
+.footer__legal-links a { font-weight: 600; }
+.footer__legal-data { margin: 0; max-width: 78ch; line-height: 1.7; }
+.footer__legal-data a { text-decoration: underline; text-underline-offset: 2px; }
+.footer--compact { padding-block: 30px; }
+.footer--compact .footer__bottom { margin-top: 0; padding-top: 0; border-top: 0; }
+
+/* ---------- Páginas legales ---------- */
+.legal-body { background: var(--paper); min-height: 100vh; display: flex; flex-direction: column; }
+.legal-body .footer { margin-top: auto; }
+.legal-header { background: var(--paper); border-bottom: 1px solid var(--line); padding-block: 14px; }
+.legal-main { padding-block: clamp(40px, 6vw, 72px); }
+.legal-back { display: inline-block; margin-bottom: 30px; font-size: .93rem; font-weight: 700; color: var(--mute); transition: color .2s; }
+.legal-back:hover { color: var(--rayo); }
+.legal-article { max-width: 65ch; }
+.legal-article h1 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.9rem, 4.6vw, 2.9rem); line-height: 1.04; letter-spacing: .005em; margin: 0 0 26px; }
+.legal-article h2 { font-size: 1.06rem; font-weight: 800; margin: 34px 0 12px; }
+.legal-article p { margin: 0 0 14px; font-size: .97rem; line-height: 1.7; color: #3A3A40; }
+.legal-article ul { list-style: disc; padding-left: 20px; margin: 0 0 16px; display: grid; gap: 8px; font-size: .97rem; line-height: 1.65; color: #3A3A40; }
+.legal-article b { color: var(--text); }
+.legal-article a { color: var(--rayo); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 @media (min-width: 760px) { .footer__top { grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; } }
 
 /* ---------- Reveal on scroll ---------- */
