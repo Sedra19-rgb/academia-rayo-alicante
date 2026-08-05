@@ -1,6 +1,6 @@
 /* =====================================================================
    Academia Oficial Rayo Vallecano Provincia de Alicante
-   PPDF® · Signature Experience — interacciones
+   Web institucional — interacciones
    ===================================================================== */
 (function () {
   'use strict';
@@ -102,13 +102,13 @@
       btn.classList.toggle('is-loading', on);
       btn.disabled = on;
       var label = $('.btn-label', btn);
-      if (label) label.textContent = on ? 'Enviando…' : 'Reservar plaza';
+      if (label) label.textContent = on ? 'Enviando…' : 'Solicitar información';
     };
 
     var showSuccess = function (nombre) {
       var wa = $('#wa-btn');
       if (wa) {
-        var txt = 'Hola, acabo de dejar mis datos para la Signature Experience de la Academia Rayo Vallecano Alicante' + (nombre ? ' (' + nombre + ')' : '') + '. Me gustaría reservar plaza.';
+        var txt = 'Hola, acabo de dejar mis datos en la web de la Academia Oficial Rayo Vallecano Provincia de Alicante' + (nombre ? ' (' + nombre + ')' : '') + '. Me gustaría recibir información.';
         wa.href = 'https://wa.me/' + CONFIG.WHATSAPP_NUMBER + '?text=' + encodeURIComponent(txt);
       }
       if (form) form.style.display = 'none';
@@ -155,7 +155,7 @@
         consentimiento: true,
         origen: CONFIG.ORIGEN,
         tipo: 'Lead Academia',
-        source: 'Landing · Signature Experience · Rayo Alicante',
+        source: 'Web · Academia Rayo Vallecano Alicante',
         fuenteUrl: window.location.href,
         timestamp: new Date().toISOString(),
         utm_source: utms.utm_source || '',

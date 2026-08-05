@@ -480,6 +480,53 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
   .pulse, .spinner { animation: none; }
 }
 
+/* ---------- Web institucional: hero, manifiesto, pilares, legado ---------- */
+.hero__crest { display: block; width: 62px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 3px 12px rgba(0,0,0,.6)); }
+.hero__cta { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+.prose { max-width: 68ch; margin-top: 34px; }
+.prose p { margin: 0 0 16px; font-size: 1.04rem; line-height: 1.75; color: var(--mute); }
+.prose p b { color: var(--text); font-weight: 700; }
+.section-head + .prose { margin-inline: auto; }
+
+.creed {
+  margin-top: 52px; background: var(--ink); color: var(--on-dark);
+  border-radius: var(--r-xl); padding: clamp(30px, 5vw, 54px); position: relative; overflow: hidden;
+  border-left: 6px solid var(--rayo);
+}
+.creed p { margin: 0 0 14px; font-size: clamp(1.02rem, 1.7vw, 1.16rem); line-height: 1.7; color: #D9D8DD; max-width: 62ch; }
+.creed__end { color: #fff !important; font-weight: 700; }
+.creed__quote {
+  margin: 30px 0 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14);
+  font-family: var(--font-display); text-transform: uppercase; color: var(--rayo);
+  font-size: clamp(1.45rem, 3.4vw, 2.5rem); line-height: 1.08; letter-spacing: .005em; max-width: 22ch;
+}
+
+.module__n { font-family: var(--font-display); font-size: 1rem; color: var(--rayo); letter-spacing: .06em; display: block; margin-bottom: 12px; }
+.module__claim { color: #fff !important; font-weight: 600; margin-bottom: 10px; }
+.module__tags { font-size: .84rem !important; letter-spacing: .01em; color: #8F8F99 !important; margin-bottom: 10px; }
+.ratio__close { margin-top: 22px; font-weight: 700; color: #fff; }
+
+.premium-list { margin-top: 48px; display: grid; gap: 14px 34px; grid-template-columns: 1fr; }
+.premium-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--mute); }
+.premium-list svg { flex: none; color: var(--rayo); margin-top: 4px; }
+.section-close { margin-top: 40px; font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.1rem, 2.2vw, 1.6rem); line-height: 1.15; color: var(--text); max-width: 30ch; }
+
+.testi-grid { margin-top: 48px; display: grid; gap: 40px; grid-template-columns: 1fr; justify-items: center; }
+.testi-item { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.testi-cta { margin-top: 44px; text-align: center; }
+
+.process { text-align: center; max-width: 900px; margin-inline: auto; }
+.process__creed { font-size: clamp(1.04rem, 1.8vw, 1.2rem); line-height: 1.75; color: var(--on-dark-mute); margin: 0 0 18px; }
+.process__creed b { color: #fff; }
+.process__welcome { margin: 30px 0 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14); font-size: 1.04rem; line-height: 1.7; color: #D9D8DD; }
+.process__claim { margin: 30px 0 0; font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.5rem, 4vw, 2.6rem); line-height: 1.06; color: #fff; }
+.process__claim em { font-style: normal; color: var(--rayo); }
+.process .manifesto__lema { margin-top: 40px; }
+
+@media (min-width: 700px) { .premium-list { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 760px) { .testi-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
+
 /* ---------- A11y helpers ---------- */
 .skip-link { position: absolute; left: -9999px; top: 0; background: var(--rayo); color: #fff; padding: 12px 18px; z-index: 100; border-radius: 0 0 var(--r) 0; }
 .skip-link:focus { left: 0; }
