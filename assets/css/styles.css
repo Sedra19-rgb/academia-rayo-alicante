@@ -507,6 +507,14 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .module__tags { font-size: .84rem !important; letter-spacing: .01em; color: #8F8F99 !important; margin-bottom: 10px; }
 .ratio__close { margin-top: 22px; font-weight: 700; color: #fff; }
 
+.method-strip { margin-top: 54px; display: grid; gap: 18px; grid-template-columns: 1fr; }
+.method-strip img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r-lg); border: 1px solid rgba(255,255,255,.08); }
+
+.split--exp { margin-top: 48px; }
+.split--exp .split__media { min-height: 380px; }
+.split__text .premium-list { margin-top: 0; grid-template-columns: 1fr; }
+.split__text .section-close { margin-top: 30px; }
+
 .premium-list { margin-top: 48px; display: grid; gap: 14px 34px; grid-template-columns: 1fr; }
 .premium-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--mute); }
 .premium-list svg { flex: none; color: var(--rayo); margin-top: 4px; }
@@ -525,6 +533,7 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .process .manifesto__lema { margin-top: 40px; }
 
 @media (min-width: 700px) { .premium-list { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 760px) { .method-strip { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 760px) { .testi-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
 
 /* ---------- A11y helpers ---------- */
