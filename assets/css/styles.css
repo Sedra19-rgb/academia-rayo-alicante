@@ -508,7 +508,7 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .ratio__close { margin-top: 22px; font-weight: 700; color: #fff; }
 
 .method-strip { margin-top: 54px; display: grid; gap: 18px; grid-template-columns: 1fr; }
-.method-strip img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r-lg); border: 1px solid rgba(255,255,255,.08); }
+.method-strip img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; max-height: 380px; object-fit: cover; border-radius: var(--r-lg); border: 1px solid rgba(255,255,255,.08); }
 
 .split--exp { margin-top: 48px; }
 .split--exp .split__media { min-height: 380px; }
@@ -533,7 +533,7 @@ h1, h2, h3 { line-height: 1.08; letter-spacing: -.01em; font-weight: 800; }
 .process .manifesto__lema { margin-top: 40px; }
 
 @media (min-width: 700px) { .premium-list { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 760px) { .method-strip { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 620px) { .method-strip { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 760px) { .testi-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
 
 /* ---------- A11y helpers ---------- */
