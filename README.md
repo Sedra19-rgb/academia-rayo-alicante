@@ -4,7 +4,7 @@ Landing de captación (one-page) para la **Signature Experience** de la Academia
 Rayo Vallecano Provincia de Alicante. El formulario de cualificación envía los leads a
 un webhook de **n8n**, que clasifica el calor (🔥/🟡/⚪) y escribe en el CRM.
 
-> Del 6 al 31 de julio · Granja de Rocamora · 17:30–19:00 / 19:00–20:30 · L-V.
+> Del 6 al 31 de julio · Provincia de Alicante · 17:30–19:00 / 19:00–20:30 · L-V.
 
 ## Stack
 
