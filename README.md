@@ -30,7 +30,7 @@ La URL del webhook y el teléfono están centralizados en `assets/js/main.js`:
 ```js
 var CONFIG = {
   WEBHOOK_URL: 'https://reformaspro.app.n8n.cloud/webhook/rayo-signature', // ← cámbialo
-  WHATSAPP_NUMBER: '34669773531',
+  WHATSAPP_NUMBER: '34722428064',
   ORIGEN: 'landing-signature'
 };
 ```
