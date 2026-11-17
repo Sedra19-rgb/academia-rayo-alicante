@@ -15,7 +15,7 @@
   */
   var CONFIG = {
     WEBHOOK_URL: 'https://reformaspro.app.n8n.cloud/webhook/academia-rayo-signature',
-    WHATSAPP_NUMBER: '34678981489',
+    WHATSAPP_NUMBER: '34722428064',
     ORIGEN: 'landing-signature'
   };
 
@@ -187,12 +187,12 @@
             // (sale antes del fetch) ni en fallo. Guard fbq dentro de trackLead.
             if (window.ARVTracking) { window.ARVTracking.trackLead(); }
           } else {
-            showError('No hemos podido enviar tus datos. Inténtalo de nuevo o llámanos al +34 678 98 14 89.');
+            showError('No hemos podido enviar tus datos. Inténtalo de nuevo o llámanos al +34 722 42 80 64.');
           }
         })
         .catch(function () {
           setLoading(false);
-          showError('Ha habido un problema de conexión. Inténtalo de nuevo o llámanos al +34 678 98 14 89.');
+          showError('Ha habido un problema de conexión. Inténtalo de nuevo o llámanos al +34 722 42 80 64.');
         });
     });
   }
